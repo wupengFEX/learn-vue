@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <span id="app">
+        <span v-if="show"><code>show=true</code> 所以你可以看到我啦！</span>
+        <span v-if="hide"><code>hide=false</code> 所以你不能看到我啦！</span>
+    </span>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                show: true,
+                hide: false
+            }
+        });
+    </script>
+</body>
+</html>

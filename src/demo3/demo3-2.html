@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <span>原始字符串：{{message}}</span>
+        <span>反转后的字符串：{{reversedMessage}}</span>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var mv = new Vue({
+            el: "#app",
+            data: {
+                message: 'Hello VUE!'
+            },
+            computed: {
+                reversedMessage: function () {
+                    return this.message.split('').reverse().join('');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

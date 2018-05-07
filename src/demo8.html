@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"> {{ message }} </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var obj = {
+            message: 'Hello VUE'
+        }
+        var vm = new Vue({
+            el: "#app",
+            data: obj
+        });
+
+        setTimeout(function () {
+            vm.message = 'Hello'
+        }, 2000);
+
+        setTimeout(function () {
+            obj.message = 'VUE'
+        }, 3000);
+    </script>
+</body>
+</html>
